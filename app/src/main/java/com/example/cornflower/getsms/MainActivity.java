@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         et = (EditText) findViewById(R.id.et);
        smsContent = new SmsContent(new Handler(),MainActivity.this,et);
-       getContentResolver().registerContentObserver(Uri.parse("content://sms/"), true, smsContent);
+       getContentResolver().registerContentObserver(Uri.parse("content://sms/ "), true, smsContent);
     }
 
     @Override
